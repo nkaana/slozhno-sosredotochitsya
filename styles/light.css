@@ -3,10 +3,109 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root.theme-light {
+  --bg-color: #FFF1F7;
+  --text-color: #353430;
+  --subtitle-color: #353430;
+  --accent-color: #FF8DCB;
+  --main-header-color: #FFC2E6;
+  --bg-image: url(../images/cover-image-light.png);
+}
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --bg-color: #FFF1F7;
+  --text-color: #353430;
+  --subtitle-color: #353430;
+  --accent-color: #FF8DCB;
+  --main-header-color: #FFC2E6;
+  --bg-image: url(../images/cover-image-light.png);
+}
+
+.theme_light .rec__decoration {
+  display: none;
+}
+
+.theme_light .decorated-zone::before {
+  border-inline-start: 1px solid var(--text-color);
+  border-block-end: 1px solid var(--text-color);
+}
+
+.theme_light .decorated-zone::after {
+  border-inline-end: 1px solid var(--text-color);
+  border-block-start: 1px solid var(--text-color);
+}
+
+.theme_light .header__theme-menu-button {
+  color: var(--text-color);
+}
+
+.theme_light .header__theme-menu-button:hover {
+  outline: 1px solid rgb(50 49 45 / 0.4);
+}
+.theme_light .header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--text-color);
+}
+
+.theme_light .header__theme-menu-button_active {
+  outline: 1px solid var(--text-color);
+}
+
+.theme_light .header__subtitle-content {
+  color: var(--text-color);
+}
+
+.theme_light .section__title {
+  color: var(--text-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #FFF1F7;
+    --text-color: #353430;
+    --subtitle-color: #353430;
+    --accent-color: #FF8DCB;
+    --main-header-color: #FFC2E6;
+    --bg-image: url(../images/cover-image-light.png); 
+    }
+
+  .theme_light .rec__decoration {
+    display: none;
+  }
+    
+  .theme_light .decorated-zone::before {
+    border-inline-start: 1px solid var(--text-color);
+    border-block-end: 1px solid var(--text-color);
+  }
+    
+  .theme_light .decorated-zone::after {
+    border-inline-end: 1px solid var(--text-color);
+    border-block-start: 1px solid var(--text-color);
+  }
+    
+  .theme_light .header__theme-menu-button {
+    color: var(--text-color);
+  }
+    
+  .theme_light .header__theme-menu-button:hover {
+    outline: 1px solid rgb(50 49 45 / 0.4);
+  }
+  .theme_light .header__theme-menu-button:focus-visible {
+    border-block-end: 1px solid var(--text-color);
+  }
+    
+  .theme_light .header__theme-menu-button_active {
+     outline: 1px solid var(--text-color);
+  }
+
+  .theme_light .header__subtitle-content {
+    color: var(--text-color);
+  }
+    
+  .theme_light .section__title {
+    color: var(--text-color);
+  }
 }
