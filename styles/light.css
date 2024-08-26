@@ -69,7 +69,7 @@
     --subtitle-color: #353430;
     --accent-color: #FF8DCB;
     --main-header-color: #FFC2E6;
-    --bg-image: url(../images/cover-image-light.png); 
+    --bg-image: url(../images/cover-image-light.png);
   }
 
   .theme_light .rec__decoration {
