@@ -1,5 +1,4 @@
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
@@ -23,8 +22,8 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--decoration-color);
+  border-block-end: 1px solid var(--decoration-color);
   inset-block-end: 10px;
   inset-inline-start: 10px;
 }
@@ -34,8 +33,8 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--decoration-color);
+  border-block-start: 1px solid var(--decoration-color);
   inset-block-start: 10px;
   inset-inline-end: 10px;
 }
@@ -50,7 +49,7 @@
 .header__theme-menu-button {
   min-block-size: 26px;
   background-color: transparent;
-  color: var(--accent-color);
+  color: var(--button-text-color);
   border: none;
   text-align: center;
   line-height: 100%;
@@ -72,7 +71,7 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--button-text-color);
   pointer-events: none;
 }
 
@@ -95,7 +94,7 @@
 .header__subtitle-content {
   font-weight: bold;
   line-height: initial;
-  color: var(--bg-color);
+  color: var(--subtitle-color);
 }
 
 article p:not(:last-child) {
@@ -107,7 +106,7 @@ article p:not(:last-child) {
   inset-block-start: 10px;
   inset-inline-end: 10px;
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: var(--decoration-color);
   line-height: 139%;
   margin-inline-end: 28px;
 }
@@ -120,10 +119,9 @@ article p:not(:last-child) {
   inline-size: 9px;
   block-size: 9px;
   border-radius: 50%;
-  background-color: var(--accent-color);
-  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background-color: var(--decoration-color);
+  box-shadow: 0px 0px 4px 2px var(--decoration-color);
 }
-
 
 .section {
   display: grid;
@@ -138,7 +136,7 @@ article p:not(:last-child) {
 }
 
 .section__title {
-  color: var(--accent-color);
+  color: var(--section-title-color);
   font-weight: bold;
   font-size: inherit;
 }
@@ -249,9 +247,13 @@ section > .section__subtitle {
     padding: 0 20px;
   }
 
+  .section__why,
+  .section__advice {
+    grid-template-columns: 32% minmax(min-content, max-content);
+  }
+
   .section__why {
     grid-template-rows: repeat(2, min-content);
-    grid-template-columns: 32% minmax(min-content, max-content);
   }
 
   .section__why article:last-child {
@@ -259,8 +261,8 @@ section > .section__subtitle {
   }
 
   .section__title {
-      grid-row: 1/3;
-      align-self: start;
+    grid-row: 1/3;
+    align-self: start;
   }
 
   .section__factors-title {
@@ -269,7 +271,6 @@ section > .section__subtitle {
 
   .section__advice {
     grid-template-rows: repeat(6, min-content);
-    grid-template-columns: 32% minmax(min-content, max-content);
   }
 
   .section__advice article:last-child {
@@ -297,6 +298,7 @@ section > .section__subtitle {
 
   .section__gallery_image {
     object-fit: cover;
+    min-width: 100%;
   }
 
   .section__gallery_image-sunset {
